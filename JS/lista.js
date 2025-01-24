@@ -22,5 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "/HTML/toDoList.html";
   }
 
-  console.log("hola");
+  console.log("adios");
 });
