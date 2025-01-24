@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link rel="stylesheet" href="/CSS/toDoList.css" />
+  </head>
+  <body>
+    <div class="tablaTareas">
+      <form id="formulario">
+        <div class="encabezado">
+          <h1 class="titulo">TO DO LIST</h1>
+        </div>
+        <div class="imagen"></div>
+        <div class="titulo">
+          <p>Task title</p>
+          <input
+            id="titulo"
+            type="text"
+            placeholder="Titulo"
+            style="width: 100px"
+          />
+        </div>
+
+        <div class="fecha-categoria">
+          <p>Date:</p>
+          <input id="fecha" type="date" name="Fecha" style="width: 100px" />
+          <p>Category:</p>
+          <input
+            id="categoria"
+            type="text"
+            placeholder="Categoria"
+            style="width: 100px"
+          />
+        </div>
+
+        <div class="descripcion">
+          <p>Description:</p>
+          <textarea
+            id="descripcion"
+            name="mensaje"
+            rows="5"
+            cols="40"
+          ></textarea>
+        </div>
+        <div class="button">
+          <input class="boton" type="submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+    <script type="module" src="/JS/toDoList.js"></script>
+    <script type="module" src="/JS/lista.js"></script>
+  </body>
+</html>

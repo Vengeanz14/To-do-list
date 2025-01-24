@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listas de tareas</title>
+    <link rel="stylesheet" href="/CSS/lista-style.css" />
+  </head>
+  <body>
+    <div class="botones">
+      <div class="crear-tarea">
+        <button id="create">Create task</button>
+      </div>
+      <div class="modificar-tarea">
+        <button id="editar">Edit task</button>
+      </div>
+      <div class="borrar-tarea">
+        <button>Delete task</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="titulo">To Do List</h1>
+      <div class="titulos">
+        <h3>Task title</h3>
+        <h3>Date</h3>
+        <h3>Category</h3>
+
+        <div class="descripcion">
+          <h3>Description</h3>
+        </div>
+      </div>
+      <div class="contenedorTareas"></div>
+    </div>
+    <script type="module" src="/JS/lista.js"></script>
+    <script type="module" src="/JS/toDoList.js"></script>
+  </body>
+</html>
