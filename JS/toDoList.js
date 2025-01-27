@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedorTareas = document.querySelector("#contenedorTareas");
 
   const formulario = document.querySelector("#formulario");
+
   //Contenedor para las citas
 
   const tareaObj = {
@@ -40,8 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //metodo
     agregar(tarea) {
       this.tarea = [...this.tarea, tarea];
+
+      console.log(this.tarea);
     }
-    mostrar() {}
   }
 
   //Instanciamos una clase
@@ -58,7 +60,25 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     tareas.agregar(tareaObj);
-    window.location.href = "/HTML/lista.html";
+    // window.location.href = "/HTML/lista.html";
+
+    //Transacciones
+
+    let transaccion = DB.transaction(["tareas"], "readwrite");
+
+    transaccion.oncomplete = function () {
+      console.log("Transaccion completada");
+    };
+
+    transaccion.onerror = function () {
+      console.log("Transaccion incompleta");
+    };
+
+    const objectStore = transaccion.objectStore("tareas");
+
+    const peticion = objectStore.add({ ...tareaObj, id: Date.now() });
+
+    console.log(peticion);
   }
 
   /// crear DB //////////////////////////////////////////
@@ -89,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const objectStore = db.createObjectStore("tareas", {
         keyPath: "id",
-        autoIncremet: "true",
+        autoIncrement: true,
       });
 
       //Definir todas las columnas

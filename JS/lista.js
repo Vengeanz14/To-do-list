@@ -21,10 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
   function editarCliente() {
     window.location.href = "/HTML/toDoList.html";
   }
-
-<<<<<<< HEAD
-  console.log("adios buenas");
-=======
-  console.log("buenas tardes");
->>>>>>> main
 });
