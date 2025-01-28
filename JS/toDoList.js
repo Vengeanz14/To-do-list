@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     tareas.agregar(tareaObj);
-    // window.location.href = "/HTML/lista.html";
+    window.location.href = "/HTML/lista.html";
 
     //Transacciones
 
